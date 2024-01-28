@@ -20,7 +20,4 @@ services:
       - ./data_pgadmin:/var/lib/pgadmin
     ports:
       - "8080:80"
-
-
-
-
+    user: "root"

@@ -41,7 +41,7 @@ python ingest_data.py \
   --table_name=yellow_taxi_trips \
   --url=${URL}
 
-URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
 
 docker run -it \
   --network=pg-network \
