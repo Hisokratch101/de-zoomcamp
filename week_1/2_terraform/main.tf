@@ -8,14 +8,14 @@ terraform {
 }
 
 provider "google" {
-    credentials = "./keys/my-creeds.json"
-  project = "eminent-yen-411522"
-  region  = "us-central1"
+  credentials = file(var.credentials)
+  project     = var.project
+  region      = var.region
 }
 
-resource "google_storage_bucket" "auto-expire"  {
-  name          = "eminent-yen-411522-terra-bucket"
-  location      = "US"
+resource "google_storage_bucket" "bucket-demo" {
+  name          = var.gcs_bucket_name
+  location      = var.location
   force_destroy = true
 
 
@@ -27,4 +27,8 @@ resource "google_storage_bucket" "auto-expire"  {
       type = "AbortIncompleteMultipartUpload"
     }
   }
+}
+resource "google_bigquery_dataset" "dataset" {
+  dataset_id = var.bq_dataset_name
+  location   = var.location
 }
