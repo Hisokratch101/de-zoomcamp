@@ -84,3 +84,5 @@ week_1/1_docker_sql/.ipynb_checkpoints/
 *.csv
 week_1/1_docker_sql/ny_taxi_postgres_data/
 week_1/1_docker_sql/output.csv.gz
+home work/ny_taxi_postgres_data
+home work/data_pgadmin
